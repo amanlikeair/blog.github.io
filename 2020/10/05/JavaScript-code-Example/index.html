@@ -1,0 +1,702 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog.github.io/img/818107.png">
+  <link rel="icon" type="image/png" href="/blog.github.io/img/818107.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Charles SHI">
+  <meta name="keywords" content="Charles, Yiding, SHI, Site">
+  <title>JavaScript code Example - Charles Yiding SHI &#39;s Site</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/blog.github.io/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/blog.github.io/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/blog.github.io/js/utils.js" ></script>
+  <script  src="/blog.github.io/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/blog.github.io/">&nbsp;<strong>Charles Yiding SHI 's Site</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/blog.github.io/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-05 16:58" pubdate>
+        October 5, 2020
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.4k Characters
+    </span>
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">JavaScript code Example</h1>
+            
+              <p class="note note-info">
+                
+                  Last Update On：October 5, 2020
+                
+              </p>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="JS代码案例"><a href="#JS代码案例" class="headerlink" title="JS代码案例"></a>JS代码案例</h1><hr>
+<p>2020-Sep-21<br>Complete Web Development Bootcamp on Udemy<br><a target="_blank" rel="noopener" href="https://www.udemy.com/course/the-complete-web-development-bootcamp/">https://www.udemy.com/course/the-complete-web-development-bootcamp/</a><br>JavaScript example sentences  </p>
+<hr>
+<p>选择h1字体的内容 改变颜色:</p>
+<pre><code class="hljs javascript"><span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;h1&quot;</span>).style.color = <span class="hljs-string">&quot;yellow&quot;</span></code></pre>
+
+<p>选择a锚 获得链接中的地址:</p>
+<pre><code class="hljs javascript"><span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;a&quot;</span>).getAttribute(<span class="hljs-string">&quot;href&quot;</span>);</code></pre>
+
+<p>选择a锚 设置链接中的地址 设置为google:</p>
+<pre><code class="hljs javascript"><span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;a&quot;</span>).setAttribute(<span class="hljs-string">&quot;href&quot;</span>, <span class="hljs-string">&quot;https://google.com&quot;</span>);
+类似的:
+<span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&quot;img&quot;</span>)[<span class="hljs-number">1</span>].setAttribute(<span class="hljs-string">&quot;src&quot;</span>, randomImageSource2);</code></pre>
+
+<p>选择h1字体的内容 将它html中的文本段改为Good bye. 即: <code>&lt;h1&gt;blue sky&lt;/h1&gt;</code> 变为<code>&lt;h1&gt;Good bye&lt;/h1&gt;</code></p>
+<pre><code class="hljs javascript"><span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;h1&quot;</span>).innerHTML = <span class="hljs-string">&quot;Good bye&quot;</span>;</code></pre>
+
+<p>选择h1字体的内容 将它html中的文本段改为<em>Good bye</em>. 即: <code>&lt;h1&gt;blue sky&lt;/h1&gt;</code> 变为<code>&lt;h1&gt;&lt;em&gt;Good bye&lt;/em&gt;&lt;/h1&gt;</code></p>
+<pre><code class="hljs javascript"><span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;h1&quot;</span>).innerHTML = <span class="hljs-string">&quot;&lt;em&gt;Good bye&lt;em&gt;&quot;</span>;</code></pre>
+
+<p>选择h1字体的内容 返回文本内容:</p>
+<pre><code class="hljs javascript"><span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;h1&quot;</span>).textContent;</code></pre>
+
+<p>取随机数:</p>
+<pre><code class="hljs javascript"><span class="hljs-built_in">Math</span>.random();</code></pre>
+
+<p>取整数:</p>
+<pre><code class="hljs javascript"><span class="hljs-built_in">Math</span>.floor();</code></pre>
+
+<p>if else else 语句:</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">if</span> (randomNumber1 &gt; randomNumber2) &#123;
+  ;
+&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (randomNumber2 &gt; randomNumber1) &#123;
+  ;
+&#125; <span class="hljs-keyword">else</span> &#123;
+  ;
+&#125;</code></pre>
+
+<p>为一个button设置一个listener, click时触发handleClick. 第一句时handleClick后不需要(),否则将会直接被触发,而不是click后</p>
+<pre><code class="hljs javascript"><span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;button&quot;</span>).addEventListener(<span class="hljs-string">&quot;click&quot;</span>, handleClick);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleClick</span>(<span class="hljs-params"></span>) </span>&#123;
+  alert(<span class="hljs-string">&quot;hello&quot;</span>);
+&#125;</code></pre>
+
+<p>如何为所有button添加Listener??<br>获知html中名为.drum类的按钮的元素的数量</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numberOfButton = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&quot;.drum&quot;</span>).length;</code></pre>
+
+<p>或让selector寻找button</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> numberOfButton = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&quot;button&quot;</span>).length;</code></pre>
+
+<p>然后,为所有的这些元素设置Listener, click将触发 handleClick函数  </p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &amp;lt; numberOfButton; i++) &#123;
+  <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&quot;.drum&quot;</span>)[i].addEventListener(<span class="hljs-string">&quot;click&quot;</span>, handleClick);
+&#125;</code></pre>
+
+<p>讲一个函数作为另一个函数的参数:</p>
+<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">multiply</span>(<span class="hljs-params">num1, num2</span>) </span>&#123;
+  <span class="hljs-keyword">return</span> num1 \* num2;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">divide</span>(<span class="hljs-params">num1, num2</span>) </span>&#123;
+  <span class="hljs-keyword">return</span> num1 / num2;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">calculator</span>(<span class="hljs-params">num1, num2, operator</span>) </span>&#123;
+  <span class="hljs-keyword">return</span> operator(num1, num2);
+&#125;</code></pre>
+
+<p>JS里播放声音:</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> audio = <span class="hljs-keyword">new</span> Audio(<span class="hljs-string">&#x27;crash.mp3&#x27;</span>);
+audio.play();</code></pre>
+
+<p>JS中的多媒体:</p>
+<pre><code class="hljs javascript">HTMLAudioElement
+HTMLAudioElement.play()
+HTMLAudioElement.autoplay()
+HTMLAudioElement.pause()</code></pre>
+
+<p>类与对象:<br>JS 类的构造函数</p>
+<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Boy</span>(<span class="hljs-params">name, age, language</span>) </span>&#123;
+  <span class="hljs-built_in">this</span>.name = name;
+  <span class="hljs-built_in">this</span>.age = age;
+  <span class="hljs-built_in">this</span>.language = language;
+&#125;</code></pre>
+
+<p>类的实例:</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> boy1 = <span class="hljs-keyword">new</span> Boy(<span class="hljs-string">&quot;Tommy&quot;</span>, <span class="hljs-number">18</span>, [<span class="hljs-string">&quot;French&quot;</span>, <span class="hljs-string">&quot;English&quot;</span>]);</code></pre>
+
+<p>switch语句:<br>判断键盘什么键被按下</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> buttonInnerHTML = <span class="hljs-built_in">this</span>.innerHTML;
+<span class="hljs-keyword">switch</span> (buttonInnerHTML) &#123;
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;w&quot;</span>:
+    <span class="hljs-keyword">var</span> audio1 = <span class="hljs-keyword">new</span> Audio(<span class="hljs-string">&#x27;1.mp3&#x27;</span>);
+    audio1.play();
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;s&quot;</span>:
+    <span class="hljs-keyword">var</span> audio2 = <span class="hljs-keyword">new</span> Audio(<span class="hljs-string">&#x27;2.mp3&#x27;</span>);
+    audio2.play();
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;d&quot;</span>:
+    <span class="hljs-keyword">var</span> audio3 = <span class="hljs-keyword">new</span> Audio(<span class="hljs-string">&#x27;3.mp3&#x27;</span>);
+    audio3.play();
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">default</span>:
+&#125;</code></pre>
+
+<p>为整个网站添加键盘的EventListener:<br>此处<code>function()&#123;...&#125;</code> 是一个anonymous function 匿名函数  </p>
+<pre><code class="hljs javascript"><span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">&quot;keypress&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;alert(<span class="hljs-string">&quot;key is pressed!&quot;</span>)&#125;);</code></pre>
+
+<p>回调函数 callback 案例:</p>
+<pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doSomething</span>(<span class="hljs-params">msg, callback</span>)</span>&#123;
+    alert(msg);
+    <span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> callback == <span class="hljs-string">&quot;function&quot;</span>)
+    callback();
+ &#125;
+doSomething(<span class="hljs-string">&quot;回调函数&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;
+    alert(<span class="hljs-string">&quot;匿名函数实现回调!&quot;</span>);
+ &#125;);</code></pre>
+<p>案例:<br>键盘按下时, 报告事件详情<br>event中将包括很多信息, event.key将返回键名的字符,如”w”  </p>
+<pre><code class="hljs javascript"><span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">&quot;keypress&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>)</span>&#123;<span class="hljs-built_in">console</span>.log(event)&#125;);</code></pre>
+<p>jQuery 等同于$</p>
+<pre><code class="hljs javascript">jQuery(<span class="hljs-string">&quot;h1&quot;</span>);
+$(<span class="hljs-string">&quot;h1&quot;</span>);</code></pre>
+
+<p>等待jQuery加载成功, 之后执行.js文件中的语句:</p>
+<pre><code class="hljs javascript">$(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;
+  $(<span class="hljs-string">&quot;h1&quot;</span>).css(<span class="hljs-string">&quot;color&quot;</span>,<span class="hljs-string">&quot;red&quot;</span>);
+&#125;)</code></pre>
+<p>等同于将&lt;script src=”…””&gt;</script>在</body>之前引用, 即<body>部分的最后引用. 而不同于在<head>中引用</p>
+<p>添加一个css中的class, 改变字体:</p>
+<pre><code class="hljs javascript">$(<span class="hljs-string">&quot;h1&quot;</span>).addClass(<span class="hljs-string">&quot;big-title&quot;</span>);</code></pre>
+<p>删除一个class</p>
+<pre><code class="hljs javascript">$(<span class="hljs-string">&quot;h1&quot;</span>).removeClass(<span class="hljs-string">&quot;big-title&quot;</span>);</code></pre>
+<p>添加两个class</p>
+<pre><code class="hljs javascript">$(<span class="hljs-string">&quot;h1&quot;</span>).addClass(<span class="hljs-string">&quot;big-title margin-50&quot;</span>);</code></pre>
+<p>查看对象是否属于某个class, 返回值为boolean</p>
+<pre><code class="hljs javascript">$(<span class="hljs-string">&quot;h1&quot;</span>).hasClass(<span class="hljs-string">&quot;margin-50&quot;</span>);</code></pre>
+
+
+<p>jQuery中更改文本:</p>
+<pre><code class="hljs javascript">$(<span class="hljs-string">&quot;h1&quot;</span>).text(<span class="hljs-string">&quot;morning&quot;</span>);</code></pre>
+<p>或者更改innerHTML:</p>
+<pre><code class="hljs JavaScript">$(<span class="hljs-string">&quot;h1&quot;</span>).html(<span class="hljs-string">&quot;&lt;em&gt;morning&lt;/em&gt;&quot;</span>);</code></pre>
+
+<p>获取attribute 参数:  </p>
+<pre><code class="hljs javascript">$(<span class="hljs-string">&quot;img&quot;</span>).attr(<span class="hljs-string">&quot;src&quot;</span>);  <span class="hljs-comment">//img链接向谁?  </span>
+$(<span class="hljs-string">&quot;img&quot;</span>).attr(<span class="hljs-string">&quot;class&quot;</span>);    <span class="hljs-comment">//img 所属class是?</span>
+<span class="hljs-string">``</span><span class="hljs-string">`  </span>
+<span class="hljs-string">设置attribute 参数, &lt;a&gt;指向 google.com  </span>
+<span class="hljs-string">`</span><span class="hljs-string">``</span>javascript
+$(<span class="hljs-string">&quot;a&quot;</span>).attr(<span class="hljs-string">&quot;href&quot;</span>, <span class="hljs-string">&quot;&lt;http://googlw.com&quot;</span>&gt;);
+<span class="hljs-string">``</span><span class="hljs-string">`  </span>
+<span class="hljs-string"></span>
+<span class="hljs-string">jQuery设置Event listener:  </span>
+<span class="hljs-string">`</span><span class="hljs-string">``</span>javascript
+$(<span class="hljs-string">&quot;h1&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;
+  $(<span class="hljs-string">&quot;h1&quot;</span>).css(<span class="hljs-string">&quot;color&quot;</span>, <span class="hljs-string">&quot;blue&quot;</span>);
+&#125;);</code></pre>
+
+<p>jQuery为多个button设置event listener时, 不需要for语句遍历  </p>
+<pre><code class="hljs javascript">$(<span class="hljs-string">&quot;button&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;
+  $(<span class="hljs-string">&quot;h1&quot;</span>).css(<span class="hljs-string">&quot;color&quot;</span>, <span class="hljs-string">&quot;blue&quot;</span>);
+&#125;);</code></pre>
+
+<p>鼠标移动至目标上方时, callback函数:  </p>
+<pre><code class="hljs javascript">$(<span class="hljs-string">&quot;h1&quot;</span>).on(<span class="hljs-string">&quot;mouseover&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;
+  $(<span class="hljs-string">&quot;h1&quot;</span>).text(<span class="hljs-string">&quot;lll&quot;</span>);
+&#125;);</code></pre>
+
+<p>使用jQuery在html段中添加或删除元素. 原句: <code>&lt;h1&gt;Hello&lt;/h1&gt;</code><br>4种添加:  </p>
+<pre><code class="hljs javascript">$(<span class="hljs-string">&quot;h1&quot;</span>).before(<span class="hljs-string">&quot;&lt;button&gt;click&lt;/button&gt;&quot;</span>); <span class="hljs-comment">//将会变成:</span>
+&lt;button&gt;click&lt;<span class="hljs-regexp">/button&gt;&lt;h1&gt;Hello&lt;/</span>h1&gt;
+<span class="hljs-string">``</span><span class="hljs-string">`  </span>
+<span class="hljs-string"></span>
+<span class="hljs-string">`</span><span class="hljs-string">``</span>javascript
+$(<span class="hljs-string">&quot;h1&quot;</span>).after(<span class="hljs-string">&quot;&lt;button&gt;click&lt;/button&gt;&quot;</span>);<span class="hljs-comment">//将会变成:</span>
+&lt;h1&gt;Hello&lt;<span class="hljs-regexp">/h1&gt;&lt;button&gt;click&lt;/</span>button&gt;
+<span class="hljs-string">``</span><span class="hljs-string">`  </span>
+<span class="hljs-string"></span>
+<span class="hljs-string">`</span><span class="hljs-string">``</span>javascript
+$(<span class="hljs-string">&quot;h1&quot;</span>).prepend(<span class="hljs-string">&quot;&lt;button&gt;click&lt;/button&gt;&quot;</span>);<span class="hljs-comment">//将会变成:</span>
+&lt;h1&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>click<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>Hello&lt;/h1&gt;
+<span class="hljs-string">``</span><span class="hljs-string">`  </span>
+<span class="hljs-string"></span>
+<span class="hljs-string">`</span><span class="hljs-string">``</span>javascript
+$(<span class="hljs-string">&quot;h1&quot;</span>).append(<span class="hljs-string">&quot;&lt;button&gt;click&lt;/button&gt;&quot;</span>);<span class="hljs-comment">//将会变成:</span>
+&lt;h1&gt;Hello&lt;button&gt;click&lt;<span class="hljs-regexp">/button&gt;&lt;/</span>h1&gt;
+<span class="hljs-string">``</span><span class="hljs-string">`  </span>
+<span class="hljs-string"></span>
+<span class="hljs-string">1种删除:</span>
+<span class="hljs-string">`</span><span class="hljs-string">``</span>javascript
+$(<span class="hljs-string">&quot;h1&quot;</span>).remove(<span class="hljs-string">&quot;button&quot;</span>);</code></pre>
+
+<p>jQuery的一些动画操作 配合EventListener的动作<code>$(&quot;h1&quot;).on(&quot;mouseover&quot;, function()&#123;...&#125;);</code><br>更多搜索jQuery Effect Methods<br>隐藏/恢复(触发开关)  </p>
+<pre><code class="hljs javascript">$(<span class="hljs-string">&quot;h1&quot;</span>).hide();
+$(<span class="hljs-string">&quot;h1&quot;</span>).toggle();</code></pre>
+<p>淡入淡出:</p>
+<pre><code class="hljs javascript">$(<span class="hljs-string">&quot;h1&quot;</span>).fadeOut();
+$(<span class="hljs-string">&quot;h1&quot;</span>).fadeIn();</code></pre>
+<p>划入,划出,触发开关:</p>
+<pre><code class="hljs javascript">$(<span class="hljs-string">&quot;h1&quot;</span>).slideUp();
+$(<span class="hljs-string">&quot;h1&quot;</span>).slideDown();
+$(<span class="hljs-string">&quot;h1&quot;</span>).slideToggle();</code></pre>
+<p>css上的渐变动画:</p>
+<pre><code class="hljs javascript">$(<span class="hljs-string">&quot;h1&quot;</span>).animate(&#123;<span class="hljs-attr">opacity</span>:<span class="hljs-number">0.5</span>&#125;);
+$(<span class="hljs-string">&quot;h1&quot;</span>).animate(&#123;<span class="hljs-attr">margin</span>:<span class="hljs-number">20</span>%&#125;);</code></pre>
+<p>连续动画:</p>
+<pre><code class="hljs javascript">$(<span class="hljs-string">&quot;h1&quot;</span>).slideUp().fadeDown().animate(&#123;<span class="hljs-attr">opacity</span>:<span class="hljs-number">0.5</span>&#125;);</code></pre>
+
+<p>响应GET时, 如何返回多条html语句:<br>使用write(), 再send()  </p>
+<pre><code class="hljs javascript">app.get(<span class="hljs-string">&quot;/&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>&#123;
+  res.write(<span class="hljs-string">&quot;&lt;p&gt;hello one&lt;/p&gt;&quot;</span>);
+  res.write(<span class="hljs-string">&quot;&lt;h1&gt;hello two&lt;/h1&gt;&quot;</span>);
+  res.send();
+&#125;);</code></pre>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/categories/Developer/">Developer</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/categories/Developer/Web-App/">Web App</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/Self-Learning/">Self Learning</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/Note/">Note</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/Web-App/">Web App</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/JavaScript/">JavaScript</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog.github.io/2020/10/05/MongoDB/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">MongoDB</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog.github.io/2020/10/05/EJS/">
+                        <span class="hidden-mobile">EJS</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/blog.github.io/js/debouncer.js" ></script>
+<script  src="/blog.github.io/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/blog.github.io/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/blog.github.io/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "JavaScript code Example&nbsp;",
+      ],
+      cursorChar: "|",
+      typeSpeed: 20,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/blog.github.io/js/local-search.js" ></script>
+  <script>
+    var path = "/blog.github.io/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

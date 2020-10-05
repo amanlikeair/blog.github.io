@@ -1,0 +1,951 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog.github.io/img/818107.png">
+  <link rel="icon" type="image/png" href="/blog.github.io/img/818107.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Charles SHI">
+  <meta name="keywords" content="Charles, Yiding, SHI, Site">
+  <title>Authentication &amp; Sercurity - Charles Yiding SHI &#39;s Site</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/blog.github.io/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/blog.github.io/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/blog.github.io/js/utils.js" ></script>
+  <script  src="/blog.github.io/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/blog.github.io/">&nbsp;<strong>Charles Yiding SHI 's Site</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/blog.github.io/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-05 16:52" pubdate>
+        October 5, 2020
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.5k Characters
+    </span>
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">Authentication &amp; Sercurity</h1>
+            
+              <p class="note note-info">
+                
+                  Last Update On：October 5, 2020
+                
+              </p>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="Authentication-amp-Sercurity笔记"><a href="#Authentication-amp-Sercurity笔记" class="headerlink" title="Authentication &amp; Sercurity笔记"></a>Authentication &amp; Sercurity笔记</h1><h2 id="多层安全"><a href="#多层安全" class="headerlink" title="多层安全:"></a>多层安全:</h2><ul>
+<li>level 1: Email &amp; Password</li>
+<li>level 2: Encryption</li>
+<li>level 3: Hash</li>
+<li>level 4: Salting and Hashing</li>
+<li>level 5: Cookies &amp; Sessions</li>
+<li>level 6: OAuth 第三方网站授权( ….未完成)</li>
+</ul>
+<h2 id="level-1-Email-amp-Password"><a href="#level-1-Email-amp-Password" class="headerlink" title="level 1: Email &amp; Password"></a>level 1: Email &amp; Password</h2><p>()依靠数据库信息)</p>
+<p>项目目录下:<br><code>npm i mongoose</code></p>
+<p>然后,主文件中载入mongoose, 两段代码:</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;mongoose&#x27;</span>);</code></pre>
+<pre><code class="hljs javascript">mongoose.connect(<span class="hljs-string">&quot;mongodb://localhost:27017/fruitsDB&quot;</span>, &#123; <span class="hljs-attr">useNewUrlParser</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">useUnifiedTopology</span>: <span class="hljs-literal">true</span>&#125;);</code></pre>
+
+<p>之后写get /register:</p>
+<pre><code class="hljs javascript">app.post(<span class="hljs-string">&quot;/register&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  <span class="hljs-keyword">const</span> newUser = <span class="hljs-keyword">new</span> User(&#123;
+    email: req.body.username,
+    password: req.body.password
+  &#125;);
+  newUser.save(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>)</span>&#123;
+    <span class="hljs-keyword">if</span>(!err)&#123;
+      res.render(<span class="hljs-string">&quot;secrets&quot;</span>);
+    &#125;<span class="hljs-keyword">else</span>&#123;
+      res.send(err);
+    &#125;
+  &#125;);
+&#125;);</code></pre>
+
+<p>之后写POST /register:</p>
+<pre><code class="hljs javascript">app.post(<span class="hljs-string">&quot;/register&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  <span class="hljs-keyword">const</span> newUser = <span class="hljs-keyword">new</span> User(&#123;
+    email: req.body.username,
+    password: req.body.password
+  &#125;);
+  newUser.save(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>)</span>&#123;
+    <span class="hljs-keyword">if</span>(!err)&#123;
+      res.render(<span class="hljs-string">&quot;secrets&quot;</span>);
+    &#125;<span class="hljs-keyword">else</span>&#123;
+      res.send(err);
+    &#125;
+  &#125;);
+&#125;);</code></pre>
+
+<p>和POST /login</p>
+<pre><code class="hljs javascript">app.post(<span class="hljs-string">&quot;/login&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  <span class="hljs-keyword">const</span> username = req.body.username;
+  <span class="hljs-keyword">const</span> password = req.body.password;
+  User.findOne(&#123;<span class="hljs-attr">email</span>: username&#125;, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err,foundUser</span>)</span>&#123;
+    <span class="hljs-keyword">if</span>(err)&#123;
+      <span class="hljs-built_in">console</span>.log(err);
+    &#125;<span class="hljs-keyword">else</span>&#123;
+      <span class="hljs-keyword">if</span>(foundUser)&#123;
+        <span class="hljs-keyword">if</span> (foundUser.password === password)&#123;
+          res.render(<span class="hljs-string">&quot;secrets&quot;</span>);
+        &#125;
+      &#125;
+    &#125;
+  &#125;)
+&#125;);</code></pre>
+<p style="color:red;">此时, 密码是以明文普通文本保存. 危险性大</p>
+
+
+
+<h2 id="level-2-Encryption"><a href="#level-2-Encryption" class="headerlink" title="level 2: Encryption"></a>level 2: Encryption</h2><p>各种加密方式, 这里选用mongoose-encryption包:</p>
+<p>安装: <code>npm i mongoose-encryption</code></p>
+<p>主文件中:</p>
+<pre><code class="hljs JavaScript"><span class="hljs-keyword">const</span> encrypt = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;mongoose-encryption&quot;</span>);</code></pre>
+
+<p>然后,根据要求改写schema格式:</p>
+<pre><code class="hljs JavaScript"><span class="hljs-keyword">const</span> userSchema = <span class="hljs-keyword">new</span> mongoose.Schema(&#123;
+  email: <span class="hljs-built_in">String</span>,
+  password: <span class="hljs-built_in">String</span>
+&#125;);</code></pre>
+
+<p>随意建立一个字符串,作为密码种子:</p>
+<pre><code class="hljs JavaScript"><span class="hljs-keyword">const</span> secret = <span class="hljs-string">&quot;Thisisourlittlesecret.&quot;</span>;</code></pre>
+
+<p>然后,加密密码(使用种子):<br>encryption是mongoose的一个插件</p>
+<pre><code class="hljs javascript">userSchema.plugin( encrypt, &#123;<span class="hljs-attr">secret</span>: secret, <span class="hljs-attr">encryptedFields</span>:[<span class="hljs-string">&quot;password&quot;</span>]&#125; );</code></pre>
+
+<p>测试运行, 发现新用户注册后数据库内数据的密码部分不再是普通文本, 而变成了二进制串.</p>
+<p style="color:red;">但这种方式,加密种子仍然能被他人获知</p>
+
+<p>我们可以采用enviroment variables来解决.</p>
+<p>安装包: <code>npm i dotenv</code></p>
+<p>在主文件最上方插入代码:</p>
+<pre><code class="hljs JavaScript"><span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;dotenv&#x27;</span>).config(); <span class="hljs-comment">//必须加在最上面</span></code></pre>
+<p>接着,项目根目录下创建文件 .env: <code>touch .env</code></p>
+<p>将主文件中的密码种子剪切粘贴到.env文件:</p>
+<pre><code class="hljs JavaScript"><span class="hljs-keyword">const</span> secret = <span class="hljs-string">&quot;Thisisourlittlesecret.&quot;</span>;</code></pre>
+<p>===&gt;</p>
+<pre><code class="hljs JavaScript">SECRET = Thisisourlittlesecret.</code></pre>
+
+<p>其他的一些重要内容之后也可以保存在这, 例如 API_KEY. 建议保持大写和_的格式</p>
+<p>主文件中若想调用, 则可使用格式为:</p>
+<pre><code class="hljs JavaScript">process.env.API_KEY;</code></pre>
+
+<p>所以, 主文件中代码变为:</p>
+<pre><code class="hljs JavaScript">userSchema.plugin( encrypt, &#123;<span class="hljs-attr">secret</span>: process.env.SECRET, <span class="hljs-attr">encryptedFields</span>:[<span class="hljs-string">&quot;password&quot;</span>]&#125; );</code></pre>
+
+<p>接下来, 采用设置gitignore的方法, 使部分文件在git push的时候不上传,从而保密.</p>
+<p>下面的连接是官方文档, 告诉一些类型的项目那些内容可以ignore:</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/github/gitignore">gitignore 连接</a></p>
+<p>我们是nodeJS项目, 所以选择Node.采用设置gitignore</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/github/gitignore/blob/master/Node.gitignore">Node.gitignore</a></p>
+<p>有一些文件通常需要ignore:</p>
+<ul>
+<li><p>node_modules/</p>
+</li>
+<li><p>jspm_packages/</p>
+</li>
+<li><p>.env</p>
+</li>
+</ul>
+<p>在项目根目录下新建.gitignore文件 <code>touch .gitignore</code></p>
+<p>在里面直接粘贴node.gitignore里面的文字,保存</p>
+<p>可以看到, atom里, 左侧文件管理中的.env文件颜色变浅, 说明隐藏成功</p>
+<p>之后可以push到github上. 另外,因为github会保留修改记录, 之前普通文本所写的信息依然会被看到,</p>
+<p>因此需要每一次建立项目时就创建environment variables.</p>
+<p>另外, 一些网站托管服务器(如Heroku)有自己的方法储存envi vars, 有时有可视化界面供设置.</p>
+<p>目前完整代码如下:</p>
+<pre><code class="hljs JavaScript"><span class="hljs-comment">//jshint esversion:6</span>
+<span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;dotenv&#x27;</span>).config(); <span class="hljs-comment">//必须加在最上面</span>
+<span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;express&quot;</span>);           <span class="hljs-comment">//引用npm包express</span>
+<span class="hljs-keyword">const</span> bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;body-parser&quot;</span>);    <span class="hljs-comment">//引用npm包body-parser</span>
+<span class="hljs-keyword">const</span> ejs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;ejs&quot;</span>);           <span class="hljs-comment">//引用npm包request</span>
+<span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;mongoose&#x27;</span>);
+<span class="hljs-keyword">const</span> encrypt = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;mongoose-encryption&quot;</span>);
+
+<span class="hljs-keyword">const</span> app = express();
+
+app.use(express.static(<span class="hljs-string">&quot;public&quot;</span>));
+app.set(<span class="hljs-string">&#x27;view engine&#x27;</span>, <span class="hljs-string">&#x27;ejs&#x27;</span>);
+app.use(bodyParser.urlencoded(&#123;
+  extended: <span class="hljs-literal">true</span>
+&#125;));
+
+mongoose.connect(<span class="hljs-string">&quot;mongodb://localhost:27017/userDB&quot;</span>, &#123; <span class="hljs-attr">useNewUrlParser</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">useUnifiedTopology</span>: <span class="hljs-literal">true</span>&#125;);
+
+<span class="hljs-keyword">const</span> userSchema = <span class="hljs-keyword">new</span> mongoose.Schema(&#123;
+  email: <span class="hljs-built_in">String</span>,
+  password: <span class="hljs-built_in">String</span>
+&#125;);
+
+
+userSchema.plugin( encrypt, &#123;<span class="hljs-attr">secret</span>: process.env.SECRET, <span class="hljs-attr">encryptedFields</span>:[<span class="hljs-string">&quot;password&quot;</span>]&#125; );
+
+<span class="hljs-keyword">const</span> User = <span class="hljs-keyword">new</span> mongoose.model(<span class="hljs-string">&quot;User&quot;</span>, userSchema);
+
+app.get(<span class="hljs-string">&quot;/&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  res.render(<span class="hljs-string">&quot;home&quot;</span>);
+&#125;);
+
+app.get(<span class="hljs-string">&quot;/login&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  res.render(<span class="hljs-string">&quot;login&quot;</span>);
+&#125;);
+
+app.get(<span class="hljs-string">&quot;/register&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  res.render(<span class="hljs-string">&quot;register&quot;</span>);
+&#125;);
+
+app.post(<span class="hljs-string">&quot;/register&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  <span class="hljs-keyword">const</span> newUser = <span class="hljs-keyword">new</span> User(&#123;
+    email: req.body.username,
+    password: req.body.password
+  &#125;);
+  newUser.save(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>)</span>&#123;
+    <span class="hljs-keyword">if</span>(!err)&#123;
+      res.render(<span class="hljs-string">&quot;secrets&quot;</span>);
+    &#125;<span class="hljs-keyword">else</span>&#123;
+      res.send(err);
+    &#125;
+  &#125;);
+&#125;);
+
+app.post(<span class="hljs-string">&quot;/login&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  <span class="hljs-keyword">const</span> username = req.body.username;
+  <span class="hljs-keyword">const</span> password = req.body.password;
+  User.findOne(&#123;<span class="hljs-attr">email</span>: username&#125;, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err,foundUser</span>)</span>&#123;
+    <span class="hljs-keyword">if</span>(err)&#123;
+      <span class="hljs-built_in">console</span>.log(err);
+    &#125;<span class="hljs-keyword">else</span>&#123;
+      <span class="hljs-keyword">if</span>(foundUser)&#123;
+        <span class="hljs-keyword">if</span> (foundUser.password === password)&#123;
+          res.render(<span class="hljs-string">&quot;secrets&quot;</span>);
+        &#125;
+      &#125;
+    &#125;
+  &#125;)
+&#125;);
+
+app.listen(<span class="hljs-number">3000</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Server started on port 3000&quot;</span>);
+&#125;);
+</code></pre>
+
+
+
+<h3 id="level-3-Hash"><a href="#level-3-Hash" class="headerlink" title="level 3: Hash"></a>level 3: Hash</h3><p>归根到底, 密码种子总有可能被得到而解密</p>
+<p>可以使用Hash方法:</p>
+<p>添加包 <code>npm i md5</code></p>
+<p>主文件内, 移除加密语段</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">userSchema</span><span class="hljs-selector-class">.plugin</span>( <span class="hljs-selector-tag">encrypt</span>, &#123;<span class="hljs-attribute">secret</span>: process.env.SECRET, encryptedFields:[<span class="hljs-string">&quot;password&quot;</span>]&#125; );</code></pre>
+
+<p>添加引用md5:</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> md5 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;md5&quot;</span>);</code></pre>
+
+<p>修改 POST /register 方法,使得存入数据库的密码是一个hash数:</p>
+<pre><code class="hljs javascript">app.post(<span class="hljs-string">&quot;/register&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  <span class="hljs-keyword">const</span> newUser = <span class="hljs-keyword">new</span> User(&#123;
+    email: req.body.username,
+    password: md5(req.body.password)    <span class="hljs-comment">//hash一下</span>
+  &#125;);
+  newUser.save(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>)</span>&#123;
+    <span class="hljs-keyword">if</span>(!err)&#123;
+      res.render(<span class="hljs-string">&quot;secrets&quot;</span>);
+    &#125;<span class="hljs-keyword">else</span>&#123;
+      res.send(err);
+    &#125;
+  &#125;);
+&#125;);</code></pre>
+
+<p>以及 POST /login 方法,使得以一个hash数与数据库中的进行对比:</p>
+<pre><code class="hljs javascript">app.post(<span class="hljs-string">&quot;/login&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  <span class="hljs-keyword">const</span> username = req.body.username;
+  <span class="hljs-keyword">const</span> password = md5(req.body.password);    <span class="hljs-comment">//hash一下</span>
+  User.findOne(&#123;<span class="hljs-attr">email</span>: username&#125;, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err,foundUser</span>)</span>&#123;
+    <span class="hljs-keyword">if</span>(err)&#123;
+      <span class="hljs-built_in">console</span>.log(err);
+    &#125;<span class="hljs-keyword">else</span>&#123;
+      <span class="hljs-keyword">if</span>(foundUser)&#123;
+        <span class="hljs-keyword">if</span> (foundUser.password === password)&#123;
+          res.render(<span class="hljs-string">&quot;secrets&quot;</span>);
+        &#125;
+      &#125;
+    &#125;
+  &#125;)
+&#125;);</code></pre>
+
+<h2 id="level-4-Salting-and-Hashing"><a href="#level-4-Salting-and-Hashing" class="headerlink" title="level 4 Salting and Hashing"></a>level 4 Salting and Hashing</h2><p>需要改进, hash需要加盐</p>
+<p>项目目录下, 添加包: <code>npm i bcrypt</code></p>
+<p>主文件修改代码:</p>
+<pre><code class="hljs JavaScript"><span class="hljs-comment">// const md5 = require(&quot;md5&quot;);        //改用bcrypt</span>
+<span class="hljs-keyword">const</span> bcrypt = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;bcrypt&quot;</span>);
+
+<span class="hljs-keyword">const</span> saltRounds = <span class="hljs-number">10</span>;</code></pre>
+
+<p>加盐的round数更大更安全, 只是消耗的时间更长</p>
+<p>修改 POST /register 方法,使得存入数据库的密码是一个加盐的hash数:</p>
+<pre><code class="hljs javascript">app.post(<span class="hljs-string">&quot;/register&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  <span class="hljs-keyword">const</span> newUser = <span class="hljs-keyword">new</span> User(&#123;
+    email: req.body.username,
+    password: md5(req.body.password)    <span class="hljs-comment">//hash一下</span>
+  &#125;);
+  newUser.save(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>)</span>&#123;
+    <span class="hljs-keyword">if</span>(!err)&#123;
+      res.render(<span class="hljs-string">&quot;secrets&quot;</span>);
+    &#125;<span class="hljs-keyword">else</span>&#123;
+      res.send(err);
+    &#125;
+  &#125;);
+&#125;);</code></pre>
+
+<h2 id="level-5-Cookies-amp-Sessions"><a href="#level-5-Cookies-amp-Sessions" class="headerlink" title="level 5: Cookies &amp; Sessions"></a>level 5: Cookies &amp; Sessions</h2><p>cookies中常包括一些用户信息:</p>
+<p>例如用户浏览并添加在购物车中的信息, GET /方法时候会连同cookies一同发给服务器,</p>
+<p>服务器会根据cookie中的信息回应用户, 包括意向物品的信息.</p>
+<p>Session是client和server交互的一段时间.</p>
+<p>添加passport包来使用cookie: 以及一些其他的包:</p>
+<pre><code class="hljs elm"><span class="hljs-title">npm</span> i pass<span class="hljs-keyword">port</span>
+<span class="hljs-title">npm</span> i pass<span class="hljs-keyword">port</span>-local
+<span class="hljs-title">npm</span> i pass<span class="hljs-keyword">port</span>-local-mongoose
+<span class="hljs-title">npm</span> i express-session</code></pre>
+<p>注意包的准确的拼写</p>
+<p>主文件中, 移除代码:</p>
+<pre><code class="hljs JavaScript"><span class="hljs-comment">// const bcrypt = require(&quot;bcrypt&quot;);   //改用passport</span>
+<span class="hljs-comment">// const saltRounds = 10; //改用passport</span></code></pre>
+
+<p>添加:</p>
+<pre><code class="hljs JavaScript"><span class="hljs-keyword">const</span> session = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;express-session&#x27;</span>);
+<span class="hljs-keyword">const</span> passport = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;passport&#x27;</span>);
+<span class="hljs-keyword">const</span> passporLocalMongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;passport-local-mongoose&#x27;</span>);</code></pre>
+
+<p>设置session:</p>
+<pre><code class="hljs JavaScript">app.use(session(&#123;
+  secret:  <span class="hljs-string">&quot;Our little secret&quot;</span>,
+  resave: <span class="hljs-literal">false</span>,
+  saveUninitialized: <span class="hljs-literal">false</span>
+&#125;));</code></pre>
+
+<p>设置passport:</p>
+<pre><code class="hljs JavaScript">app.use(passport, initialized());
+app.use(passport.session());</code></pre>
+
+<p>对UserSchema处理, 加盐hash储存在数据库中:</p>
+<pre><code class="hljs JavaScript">userSchema.plugin(passporLocalMongoose);</code></pre>
+
+<p>passport处理:</p>
+<pre><code class="hljs JavaScript">passport.use(User.createStrategy());
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());</code></pre>
+
+<p>运行app.js, 系统报错<code>(node:13412) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.</code></p>
+<p>google可知, 需要添加语句:</p>
+<pre><code class="hljs JavaScript">mongoose.set(<span class="hljs-string">&quot;useCreateIndex&quot;</span>, <span class="hljs-literal">true</span>);</code></pre>
+
+<p>接下来修改post /register 方法:</p>
+<pre><code class="hljs JavaScript">app.post(<span class="hljs-string">&quot;/register&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  User.register(&#123;<span class="hljs-attr">username</span>: req.body.username&#125;, req.body.password, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, user</span>)</span>&#123;
+    <span class="hljs-keyword">if</span>(err)&#123;
+      <span class="hljs-built_in">console</span>.log(err);
+      res.redirect(<span class="hljs-string">&quot;/register&quot;</span>);
+    &#125;<span class="hljs-keyword">else</span>&#123;
+      passport.authenticate(<span class="hljs-string">&quot;local&quot;</span>)(req, res, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;
+        res.redirect(<span class="hljs-string">&quot;/secrets&quot;</span>);
+      &#125;);
+    &#125;
+  &#125;);
+&#125;);</code></pre>
+
+<p>添加get /secret 方法:</p>
+<pre><code class="hljs JavaScript">app.get(<span class="hljs-string">&quot;/secrets&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  <span class="hljs-keyword">if</span>(req.isAuthenticated())&#123;
+    res.render(<span class="hljs-string">&quot;secrets&quot;</span>);
+  &#125;<span class="hljs-keyword">else</span>&#123;
+    res.render(<span class="hljs-string">&quot;/login&quot;</span>);
+  &#125;
+&#125;);</code></pre>
+
+<p>这时候运行, register一个新用户, 在数据库内查看,将会发现新的一行多了一个salt和hash的参数和数值.</p>
+<p>此时, 回到主页之后,地址栏中可以直接访问<code>http://localhost:3000/secrets</code>,这就是因为cookies记住了我们网站的已登陆状态.</p>
+<p>如果退出浏览器(ctrl+q), 再进入,再次访问/secrets的话,则会转到login页面.</p>
+<p>这时候, 修改post /login 方法:</p>
+<pre><code class="hljs JavaScript">app.post(<span class="hljs-string">&quot;/login&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  <span class="hljs-keyword">const</span> user = <span class="hljs-keyword">new</span> User(&#123;
+    username: req.body.username,
+    password: req.body.password
+  &#125;);
+  req.login(user, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>)</span>&#123;
+    <span class="hljs-keyword">if</span>(err)&#123;
+      <span class="hljs-built_in">console</span>.log(err);
+    &#125;<span class="hljs-keyword">else</span>&#123;
+      passport.authenticate(<span class="hljs-string">&quot;local&quot;</span>)(req, res, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;
+        res.redirect(<span class="hljs-string">&quot;/secrets&quot;</span>);
+      &#125;);
+    &#125;
+  &#125;);
+&#125;);</code></pre>
+
+<p>添加get /logout 方法:</p>
+<pre><code class="hljs JavaScript">app.get(<span class="hljs-string">&quot;/logout&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  req.logout();
+  res.redirect(<span class="hljs-string">&quot;/&quot;</span>);
+&#125;);</code></pre>
+
+<p>最后的完整代码为:</p>
+<pre><code class="hljs JavaScript"><span class="hljs-comment">//jshint esversion:6</span>
+<span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;dotenv&#x27;</span>).config(); <span class="hljs-comment">//必须加在最上面</span>
+<span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;express&quot;</span>);           <span class="hljs-comment">//引用npm包express</span>
+<span class="hljs-keyword">const</span> bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;body-parser&quot;</span>);    <span class="hljs-comment">//引用npm包body-parser</span>
+<span class="hljs-keyword">const</span> ejs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;ejs&quot;</span>);           <span class="hljs-comment">//引用npm包request</span>
+<span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;mongoose&#x27;</span>);
+<span class="hljs-comment">// const encrypt = require(&quot;mongoose-encryption&quot;);    //改用hash方法加密了</span>
+<span class="hljs-comment">// const md5 = require(&quot;md5&quot;);        //改用bcrypt</span>
+<span class="hljs-comment">// const bcrypt = require(&quot;bcrypt&quot;);   //改用passport</span>
+<span class="hljs-comment">// const saltRounds = 10; //改用passport</span>
+<span class="hljs-keyword">const</span> session = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;express-session&#x27;</span>);
+<span class="hljs-keyword">const</span> passport = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;passport&#x27;</span>);
+<span class="hljs-keyword">const</span> passporLocalMongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;passport-local-mongoose&#x27;</span>);
+
+<span class="hljs-keyword">const</span> app = express();
+
+app.use(express.static(<span class="hljs-string">&quot;public&quot;</span>));
+app.set(<span class="hljs-string">&#x27;view engine&#x27;</span>, <span class="hljs-string">&#x27;ejs&#x27;</span>);
+app.use(bodyParser.urlencoded(&#123;
+  extended: <span class="hljs-literal">true</span>
+&#125;));
+
+app.use(session(&#123;
+  secret:  <span class="hljs-string">&quot;Our little secret&quot;</span>,
+  resave: <span class="hljs-literal">false</span>,
+  saveUninitialized: <span class="hljs-literal">false</span>
+&#125;));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+mongoose.connect(<span class="hljs-string">&quot;mongodb://localhost:27017/userDB&quot;</span>, &#123; <span class="hljs-attr">useNewUrlParser</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">useUnifiedTopology</span>: <span class="hljs-literal">true</span>&#125;);
+mongoose.set(<span class="hljs-string">&quot;useCreateIndex&quot;</span>, <span class="hljs-literal">true</span>);
+
+<span class="hljs-keyword">const</span> userSchema = <span class="hljs-keyword">new</span> mongoose.Schema(&#123;
+  email: <span class="hljs-built_in">String</span>,
+  password: <span class="hljs-built_in">String</span>
+&#125;);
+
+userSchema.plugin(passporLocalMongoose);
+
+<span class="hljs-keyword">const</span> User = <span class="hljs-keyword">new</span> mongoose.model(<span class="hljs-string">&quot;User&quot;</span>, userSchema);
+
+passport.use(User.createStrategy());
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+app.get(<span class="hljs-string">&quot;/&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  res.render(<span class="hljs-string">&quot;home&quot;</span>);
+&#125;);
+
+app.get(<span class="hljs-string">&quot;/login&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  res.render(<span class="hljs-string">&quot;login&quot;</span>);
+&#125;);
+
+app.get(<span class="hljs-string">&quot;/register&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  res.render(<span class="hljs-string">&quot;register&quot;</span>);
+&#125;);
+
+app.get(<span class="hljs-string">&quot;/secrets&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  <span class="hljs-keyword">if</span>(req.isAuthenticated())&#123;
+    res.render(<span class="hljs-string">&quot;secrets&quot;</span>);
+  &#125;<span class="hljs-keyword">else</span>&#123;
+    res.redirect(<span class="hljs-string">&quot;/login&quot;</span>);
+  &#125;
+&#125;);
+
+app.get(<span class="hljs-string">&quot;/logout&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  req.logout();
+  res.redirect(<span class="hljs-string">&quot;/&quot;</span>);
+&#125;);
+
+app.post(<span class="hljs-string">&quot;/register&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  User.register(&#123;<span class="hljs-attr">username</span>: req.body.username&#125;, req.body.password, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, user</span>)</span>&#123;
+    <span class="hljs-keyword">if</span>(err)&#123;
+      <span class="hljs-built_in">console</span>.log(err);
+      res.redirect(<span class="hljs-string">&quot;/register&quot;</span>);
+    &#125;<span class="hljs-keyword">else</span>&#123;
+      passport.authenticate(<span class="hljs-string">&quot;local&quot;</span>)(req, res, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;
+        res.redirect(<span class="hljs-string">&quot;/secrets&quot;</span>);
+      &#125;);
+    &#125;
+  &#125;);
+&#125;);
+
+app.post(<span class="hljs-string">&quot;/login&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>&#123;
+  <span class="hljs-keyword">const</span> user = <span class="hljs-keyword">new</span> User(&#123;
+    username: req.body.username,
+    password: req.body.password
+  &#125;);
+  req.login(user, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>)</span>&#123;
+    <span class="hljs-keyword">if</span>(err)&#123;
+      <span class="hljs-built_in">console</span>.log(err);
+    &#125;<span class="hljs-keyword">else</span>&#123;
+      passport.authenticate(<span class="hljs-string">&quot;local&quot;</span>)(req, res, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;
+        res.redirect(<span class="hljs-string">&quot;/secrets&quot;</span>);
+      &#125;);
+    &#125;
+  &#125;);
+&#125;);
+
+app.listen(<span class="hljs-number">3000</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Server started on port 3000&quot;</span>);
+&#125;);
+</code></pre>
+
+
+<h2 id="level-6-OAuth-第三方网站授权"><a href="#level-6-OAuth-第三方网站授权" class="headerlink" title="level 6: OAuth 第三方网站授权"></a>level 6: OAuth 第三方网站授权</h2>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/categories/Developer/">Developer</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/categories/Developer/Web-App/">Web App</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/Self-Learning/">Self Learning</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/Note/">Note</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/Web-App/">Web App</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog.github.io/2020/10/05/Database-SQL/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Database & SQL</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog.github.io/2020/10/05/Publish-app-to-Web/">
+                        <span class="hidden-mobile">Publish app to Web</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/blog.github.io/js/debouncer.js" ></script>
+<script  src="/blog.github.io/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/blog.github.io/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/blog.github.io/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Authentication & Sercurity&nbsp;",
+      ],
+      cursorChar: "|",
+      typeSpeed: 20,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/blog.github.io/js/local-search.js" ></script>
+  <script>
+    var path = "/blog.github.io/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

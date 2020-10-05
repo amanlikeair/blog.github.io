@@ -1,0 +1,584 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog.github.io/img/818107.png">
+  <link rel="icon" type="image/png" href="/blog.github.io/img/818107.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Charles SHI">
+  <meta name="keywords" content="Charles, Yiding, SHI, Site">
+  <title>REACT project: Keeper - Charles Yiding SHI &#39;s Site</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/blog.github.io/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/blog.github.io/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/blog.github.io/js/utils.js" ></script>
+  <script  src="/blog.github.io/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/blog.github.io/">&nbsp;<strong>Charles Yiding SHI 's Site</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/blog.github.io/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-05 17:00" pubdate>
+        October 5, 2020
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      521 Characters
+    </span>
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">REACT project: Keeper</h1>
+            
+              <p class="note note-info">
+                
+                  Last Update On：October 5, 2020
+                
+              </p>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="React实践项目keeper"><a href="#React实践项目keeper" class="headerlink" title="React实践项目keeper"></a>React实践项目keeper</h1><p>做一个便签管理的项目<br>最终效果<a target="_blank" rel="noopener" href="https://w00gz.csb.app/">这个</a></p>
+<p>从<a target="_blank" rel="noopener" href="https://codesandbox.io/s/keeper-app-part-1-completed-oplw1?fontsize=14">这里</a>导出这个项目作为基础.</p>
+<p><code>npm install</code></p>
+<p>接下来要做的事情:</p>
+<ul>
+<li><ol>
+<li>Create a new React app.</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>Create a App.jsx component.</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>Create a Header.jsx component that renders a <header> element to show the Keeper App name in an <code>&lt;h1&gt;</code>.</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>Create a Footer.jsx component that renders a <footer> element to show a copyright message in a<code>&lt;p&gt;</code>with a dynamically updated year.</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>Create a Note.jsx component to show a <code>&lt;div&gt;</code> element with a <code>&lt;h1&gt;</code> for a title and a <code>&lt;p&gt;</code> for the content.</li>
+</ol>
+</li>
+</ul>
+<h3 id="步骤1-5"><a href="#步骤1-5" class="headerlink" title="步骤1-5"></a>步骤1-5</h3><p>最终效果: <a target="_blank" rel="noopener" href="https://codesandbox.io/s/keeper-app-part-1-starting-l1pp6?fontsize=14">这里</a></p>
+<h3 id="Props"><a href="#Props" class="headerlink" title="Props"></a>Props</h3><p>可以这样定义某个模块中的自定义变量:</p>
+<pre><code class="hljs JavaScript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-dom&quot;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Card</span>(<span class="hljs-params">props</span>) </span>&#123;
+  <span class="hljs-keyword">return</span> (
+    &lt;div&gt;
+      &lt;h2&gt;&#123;props.name&#125;&lt;/h2&gt;
+      &lt;img src=&#123;props.img&#125; alt=<span class="hljs-string">&quot;avatar_img&quot;</span> /&gt;
+      &lt;p&gt;&#123;props.tel&#125;&lt;/p&gt;
+      &lt;p&gt;&#123;props.email&#125;&lt;/p&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+ReactDOM.render(
+  &lt;div&gt;
+    &lt;h1&gt;My Contacts&lt;/h1&gt;
+    &lt;Card
+      name=<span class="hljs-string">&quot;Beyonce&quot;</span>
+      img=<span class="hljs-string">&quot;https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg&quot;</span>
+      tel=<span class="hljs-string">&quot;+123 456 789&quot;</span>
+      email=<span class="hljs-string">&quot;b@beyonce.com&quot;</span>
+    /&gt;
+    &lt;Card
+      name=<span class="hljs-string">&quot;Jack Bauer&quot;</span>
+      img=<span class="hljs-string">&quot;https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg&quot;</span>
+      tel=<span class="hljs-string">&quot;+7387384587&quot;</span>
+      email=<span class="hljs-string">&quot;jack@nowhere.com&quot;</span>
+    /&gt;
+  &lt;/div&gt;,
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;root&quot;</span>)
+);</code></pre>
+
+<p>Props之于React, 类似于Attribute之于HTML,</p>
+<p>对比:</p>
+<table>
+<thead>
+<tr>
+<th>Props</th>
+<th>React</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>document.getElementById(&quot;email&quot;)</code><br><code>.id</code><br><code>.placeholder</code><br><code>.value</code></td>
+<td><code>&lt;input</code><br><code> id = &quot;email&quot;,</code><br><code> placeholder = &quot;email here&quot;,</code><br><code> value = &quot;123@gmail.com&quot;</code><br><code>/&gt;</code></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Props</th>
+<th>React</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>function Card(props) &#123;</code><br><code>return (</code><br><code>&lt;div&gt;</code><br><code>&lt;h2&gt;&#123;props.name&#125;&lt;/h2&gt;</code><br><code>&lt;p&gt;&#123;props.tel&#125;&lt;/p&gt;</code><br><code>&lt;p&gt;&#123;props.email&#125;&lt;/p&gt;</code><br><code>&lt;/div&gt;</code><br><code>);</code><br><code>&#125;</code></td>
+<td><code>&lt;Card</code><br><code>name=&quot;Beyonce&quot;</code><br><code>tel=&quot;+123 456 789&quot;</code><br><code>email=&quot;b@beyonce.com&quot;</code><br><code>/&gt;</code></td>
+</tr>
+</tbody></table>
+<p>一顿修改, 直接看最终代码: <a target="_blank" rel="noopener" href="https://codesandbox.io/s/react-props-practice-completed-c6fkx?fontsize=14">这里</a></p>
+<h1 id="React-DevTools"><a href="#React-DevTools" class="headerlink" title="React DevTools"></a>React DevTools</h1><p> 一个chrome上的插件, <a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?utm_source=chrome-ntp-icon">React Dev Tools</a></p>
+<p> 可以用于查看react项目的树形结构(模块结构)</p>
+<h1 id="Mapping-Components"><a href="#Mapping-Components" class="headerlink" title="Mapping Components"></a>Mapping Components</h1><p>直接看代码 <a target="_blank" rel="noopener" href="https://codesandbox.io/s/mapping-components-y6z4c?fontsize=14">这里</a></p>
+<p>注意, 这里在<Card>模块中设置了一个名为id的变量,这是<code>&#123;contacts.map(createCard)&#125;</code>里的map方法所要求的.</p>
+<p>(map方法类似于一个loop,遍历查找contacts里的元素,如果有符合createCard()的,便渲染)</p>
+<pre><code class="hljs JavaScript"></code></pre>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/categories/Developer/">Developer</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/categories/Developer/Web-App/">Web App</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/Self-Learning/">Self Learning</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/Note/">Note</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/Web-App/">Web App</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/REACT/">REACT</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/Real-Project/">Real Project</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog.github.io/2020/10/05/REST%20&amp;%20API/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">REST & API</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog.github.io/2020/10/05/REACT/">
+                        <span class="hidden-mobile">REACT</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/blog.github.io/js/debouncer.js" ></script>
+<script  src="/blog.github.io/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/blog.github.io/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/blog.github.io/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "REACT project: Keeper&nbsp;",
+      ],
+      cursorChar: "|",
+      typeSpeed: 20,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/blog.github.io/js/local-search.js" ></script>
+  <script>
+    var path = "/blog.github.io/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

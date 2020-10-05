@@ -1,0 +1,700 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog.github.io/img/818107.png">
+  <link rel="icon" type="image/png" href="/blog.github.io/img/818107.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Charles SHI">
+  <meta name="keywords" content="Charles, Yiding, SHI, Site">
+  <title>MongoDB - Charles Yiding SHI &#39;s Site</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/blog.github.io/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/blog.github.io/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/blog.github.io/js/utils.js" ></script>
+  <script  src="/blog.github.io/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/blog.github.io/">&nbsp;<strong>Charles Yiding SHI 's Site</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.github.io/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/blog.github.io/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-05 16:59" pubdate>
+        October 5, 2020
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.4k Characters
+    </span>
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">MongoDB</h1>
+            
+              <p class="note note-info">
+                
+                  Last Update On：October 5, 2020
+                
+              </p>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="MongoDB笔记"><a href="#MongoDB笔记" class="headerlink" title="MongoDB笔记"></a>MongoDB笔记</h1><hr>
+<p>2020-Sep-25<br>Complete Web Development Bootcamp on Udemy<br><a target="_blank" rel="noopener" href="https://www.udemy.com/course/the-complete-web-development-bootcamp/">https://www.udemy.com/course/the-complete-web-development-bootcamp/</a></p>
+<hr>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>MongoDB网站下载镜像: <a target="_blank" rel="noopener" href="https://www.mongodb.com/try/download/community">MongoDB网站</a></p>
+<p>安装在默认位置: C:\Program Files\MongoDB\Server\4.4\data\</p>
+<p>安装完成后, 在C盘下新建名为data的文件夹, data下新建名为db的文件夹</p>
+<p>命令行中, <code>cd ~</code></p>
+<p>然后新建 .bash_profile文件 <code>toch .bash_profile</code></p>
+<p>用vim打开, <code>vim .bash_profile</code></p>
+<p><code>i</code> 进入编辑模式, 粘贴以下代码:</p>
+<p><code>/4.X</code>修改为实际版本号</p>
+<pre><code>alias mongod=&quot;/c/Program\ files/MongoDB/Server/4.X/bin/mongod.exe&quot;
+alias mongo=&quot;/c/Program\ Files/MongoDB/Server/4.X/bin/mongo.exe&quot;</code></pre>
+<p><code>esc</code>键, 之后<code>:wq!</code>保存</p>
+<p>重启命令行, <code>mongo --version</code>检查是否安装成功.</p>
+<h1 id="基本使用操作"><a href="#基本使用操作" class="headerlink" title="基本使用操作"></a>基本使用操作</h1><h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p><code>mongod</code> 启动mongo</p>
+<p>将显示信息:</p>
+<pre><code>Waiting for connections&quot;,&quot;attr&quot;:&#123;&quot;port&quot;:27017</code></pre>
+<p>即此时已经成功启动,等待连接, 端口是27017</p>
+<p>持续运行保持命令行不关闭</p>
+<h3 id="启动Mongo-shell"><a href="#启动Mongo-shell" class="headerlink" title="启动Mongo shell"></a>启动Mongo shell</h3><p><code>mongo</code> 启动mongo shell</p>
+<p>我们可以在&gt;之后键入指令</p>
+<h3 id="mongo-shell-中操作"><a href="#mongo-shell-中操作" class="headerlink" title="mongo shell 中操作"></a>mongo shell 中操作</h3><p><code>show dbs</code> 显示已有databases</p>
+<p><code>use shopDB</code> 新建/切换到某个database. 刚新建之后利用<code>show dbs</code>查询不显示, 因为刚新建没有数据</p>
+<p><code>db</code> 显示当前所在db</p>
+<p><code>show collections</code> 显示db下所有table(或collections)</p>
+<p><code>db.dropDatabase()</code> 删除当前数据库</p>
+<h5 id="增"><a href="#增" class="headerlink" title="增:"></a>增:</h5><p>新建table,和第一行数据:</p>
+<p><code>db.products.insertOne(&#123; _id: 1, name: &quot;Pen&quot;, price: 1.20&#125;)</code></p>
+<h5 id="查"><a href="#查" class="headerlink" title="查:"></a>查:</h5><p>查看table中数据:</p>
+<p><code>db.products.find()</code></p>
+<p>根据条件,查看table中数据:</p>
+<p><code>db.products.find(&#123;name: &quot;Pencil&quot;&#125;)</code></p>
+<p><code>db.products.find(&#123;price: &#123;$gt: 1.0&#125;&#125;)</code>  价格大于1的</p>
+<p>或者指定展示哪些列, {_id: 1}或{_id: 0}表示是否展示这一列:<br><code>db.products.find(&#123;_id: 1&#125;, &#123;name: 1&#125;)</code></p>
+<p>其他query符:</p>
+<ul>
+<li><code>$eq</code> Matches values that are equal to a specified value.  </li>
+<li><code>$gt</code>    Matches values that are greater than a specified value.  </li>
+<li><code>$gte</code>    Matches values that are greater than or equal to a specified value.  </li>
+<li><code>$in</code>    Matches any of the values specified in an array.  </li>
+<li><code>$lt</code>    Matches values that are less than a specified value.  </li>
+<li><code>$lte</code>    Matches values that are less than or equal to a specified value.  </li>
+<li><code>$ne</code>    Matches all values that are not equal to a specified value.  </li>
+<li><code>$nin</code>    Matches none of the values specified in an array.  </li>
+</ul>
+<h5 id="改"><a href="#改" class="headerlink" title="改:"></a>改:</h5><p>为_id为2的行添加自己的一列, 名为stock, 数值32 (之前并没有这一列),<br>(操作后只有这一行数据有这一列信息.这是mongoDB不同于SQL的).<br><code>db.products.updateOne(&#123;_id:2&#125;, &#123;$set: &#123;stock: 32&#125;&#125;)</code></p>
+<h5 id="删"><a href="#删" class="headerlink" title="删:"></a>删:</h5><p>db.products.delteOne({id: 2})</p>
+<h3 id="MongoDB中数据的特殊结构"><a href="#MongoDB中数据的特殊结构" class="headerlink" title="MongoDB中数据的特殊结构"></a>MongoDB中数据的特殊结构</h3><p>可以这样定义一行数据:<br>一个产品,包括对他的两个顾客评价:</p>
+<pre><code class="hljs sql">db.products.insert(
+  &#123;
+    _id: 3,
+    name: &quot;ruby&quot;,
+    price: 2.3,
+    stock: 22,
+    review: [
+      &#123;
+        author: &quot;Jack&quot;,
+        rating: 4,
+        review: &quot;Good!&quot;
+      &#125;,
+      &#123;
+        author: &quot;Tom&quot;,
+        rating: 5,
+        review: &quot;Nice one!&quot;
+      &#125;
+    ]
+  &#125;
+)</code></pre>
+
+
+<h1 id="MondDb与Node-Js协作"><a href="#MondDb与Node-Js协作" class="headerlink" title="MondDb与Node Js协作"></a>MondDb与Node Js协作</h1><p>连接MondDb与Node Js的两种方式:</p>
+<ul>
+<li>MongoDB native driver(复杂,不常用)</li>
+<li>Mongoose(一种ODM Object Document Mapper,代码简洁,常用)</li>
+</ul>
+<h3 id="MongoDB-native-driver"><a href="#MongoDB-native-driver" class="headerlink" title="MongoDB native driver:"></a><del>MongoDB native driver:</del></h3><p><del>代码复杂…</del></p>
+<h3 id="Mongoose"><a href="#Mongoose" class="headerlink" title="Mongoose:"></a>Mongoose:</h3><h5 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h5><p>首先项目根目录下<code>npm install mongoose</code>安装包</p>
+<p>app.js主文件如下:</p>
+<blockquote>
+<p>将会新建(若有则修改)一个数据库fruitsDB. 数据库中创建一个叫fuits的table. Table中新增一行name为Apple的数据.</p>
+</blockquote>
+<pre><code class="hljs JavaScript"><span class="hljs-comment">//引用mongoose</span>
+<span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;mongoose&#x27;</span>);
+<span class="hljs-comment">//连接在本地已经启动的数据库</span>
+mongoose.connect(<span class="hljs-string">&quot;mongodb://localhost:27017/fruitsDB&quot;</span>, &#123; <span class="hljs-attr">useNewUrlParser</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">useUnifiedTopology</span>: <span class="hljs-literal">true</span>&#125;);
+<span class="hljs-comment">//后面两个为true的参数是根据Mongo所报warn被要求添加的.未来版本mongo可能会消失</span>
+
+<span class="hljs-comment">//准备一个数据结构模板</span>
+<span class="hljs-keyword">const</span> fruitSchema = <span class="hljs-keyword">new</span> mongoose.Schema (&#123;
+  name: <span class="hljs-built_in">String</span>,
+  rating: <span class="hljs-built_in">Number</span>,
+  review: <span class="hljs-built_in">String</span>
+&#125;);
+
+<span class="hljs-comment">//在数据库中以&quot;Fruit&quot;建立table, mongo会根据&quot;fruit&quot;智能地建立名为fruits(复数形式)的table</span>
+<span class="hljs-keyword">const</span> Fruit = mongoose.model(<span class="hljs-string">&quot;Fruit&quot;</span>, fruitSchema);
+
+<span class="hljs-comment">//一个准备写入table的一行新数据</span>
+<span class="hljs-keyword">const</span> fruit = <span class="hljs-keyword">new</span> Fruit(&#123;
+  name: <span class="hljs-string">&quot;Apple&quot;</span>,
+  rating: <span class="hljs-number">7</span>,
+  review: <span class="hljs-string">&quot;Pretty solid as a fruit.&quot;</span>
+&#125;);
+
+<span class="hljs-comment">//写入这一行</span>
+fruit.save();</code></pre>
+
+<p>若同时多个数据需要插入, 可使用语句:<br>callback函数用来报错</p>
+<pre><code class="hljs JavaScript">Fruit.insertMany([kiwi, orange, apple], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>)</span>&#123;
+  <span class="hljs-keyword">if</span> (err)&#123;
+    <span class="hljs-built_in">console</span>.log(err);
+  &#125;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Successfully save all&quot;</span>);
+&#125;)</code></pre>
+
+<p>可添加一下语句:<br>打印出所有fruits表格内的数据行</p>
+<pre><code class="hljs JavaScript">Fruit.find(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, fruits</span>)</span>&#123;
+  <span class="hljs-keyword">if</span> (err)&#123;
+    <span class="hljs-built_in">console</span>.log(err);
+  &#125;<span class="hljs-keyword">else</span>&#123;
+    <span class="hljs-built_in">console</span>.log(fruits);
+  &#125;
+&#125;);
+</code></pre>
+
+<p>或者这样, 只打印出数据行的名字:</p>
+<pre><code class="hljs JavaScript">Fruit.find(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, fruits</span>)</span>&#123;
+  <span class="hljs-keyword">if</span> (err)&#123;
+    <span class="hljs-built_in">console</span>.log(err);
+  &#125;<span class="hljs-keyword">else</span>&#123;
+    fruits.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">fruit</span>)</span>&#123;
+      <span class="hljs-built_in">console</span>.log(fruit.name)
+    &#125;);
+  &#125;
+&#125;);</code></pre>
+
+<p>最后不要忘了关闭与数据库的连接, 否则将一直保持连接.</p>
+<pre><code class="hljs JavaScript">mongoose.connection.close();</code></pre>
+
+<p>完整代码如下:</p>
+<pre><code class="hljs JavaScript"><span class="hljs-comment">//引用mongoose</span>
+<span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;mongoose&#x27;</span>);
+<span class="hljs-comment">//连接在本地已经启动的数据库</span>
+mongoose.connect(<span class="hljs-string">&quot;mongodb://localhost:27017/fruitsDB&quot;</span>, &#123; <span class="hljs-attr">useNewUrlParser</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">useUnifiedTopology</span>: <span class="hljs-literal">true</span>&#125;);
+<span class="hljs-comment">//后面两个为true的参数是根据Mongo所报warn被要求添加的.未来版本mongo可能会消失</span>
+
+<span class="hljs-comment">//准备一个数据结构模板</span>
+<span class="hljs-keyword">const</span> fruitSchema = <span class="hljs-keyword">new</span> mongoose.Schema (&#123;
+  name: <span class="hljs-built_in">String</span>,
+  rating: <span class="hljs-built_in">Number</span>,
+  review: <span class="hljs-built_in">String</span>
+&#125;);
+
+<span class="hljs-comment">//在数据库中以&quot;Fruit&quot;建立table, mongo会根据&quot;fruit&quot;智能地建立名为fruits(复数形式)的table</span>
+<span class="hljs-keyword">const</span> Fruit = mongoose.model(<span class="hljs-string">&quot;Fruit&quot;</span>, fruitSchema);
+
+<span class="hljs-comment">//一个准备写入table的一行新数据</span>
+<span class="hljs-keyword">const</span> apple = <span class="hljs-keyword">new</span> Fruit(&#123;
+  name: <span class="hljs-string">&quot;Apple&quot;</span>,
+  rating: <span class="hljs-number">7</span>,
+  review: <span class="hljs-string">&quot;Pretty solid as a fruit.&quot;</span>
+&#125;);
+
+<span class="hljs-comment">//另一行</span>
+<span class="hljs-keyword">const</span> kiwi = <span class="hljs-keyword">new</span> Fruit(&#123;
+  name: <span class="hljs-string">&quot;kiwi&quot;</span>,
+  rating: <span class="hljs-number">2</span>,
+  review: <span class="hljs-string">&quot;Not good.&quot;</span>
+&#125;);
+
+<span class="hljs-comment">//写入多行</span>
+Fruit.insertMany([kiwi, apple], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>)</span>&#123;
+  <span class="hljs-keyword">if</span> (err)&#123;
+    <span class="hljs-built_in">console</span>.log(err);
+  &#125;<span class="hljs-keyword">else</span>&#123;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Successfully save all&quot;</span>);
+  &#125;
+&#125;)
+
+<span class="hljs-comment">//打印出所有fruits表格内的数据行(的name)</span>
+Fruit.find(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, fruits</span>)</span>&#123;
+  <span class="hljs-keyword">if</span> (err)&#123;
+    <span class="hljs-built_in">console</span>.log(err);
+  &#125;<span class="hljs-keyword">else</span>&#123;
+    fruits.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">fruit</span>)</span>&#123;
+      <span class="hljs-built_in">console</span>.log(fruit.name)
+      mongoose.connection.close(); <span class="hljs-comment">//关闭与数据库的连接</span>
+    &#125;);
+  &#125;
+&#125;);</code></pre>
+
+<h5 id="进一步-Data-validation数据验证"><a href="#进一步-Data-validation数据验证" class="headerlink" title="进一步: Data validation数据验证"></a>进一步: Data validation数据验证</h5><p>原代码中:</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> fruitSchema = <span class="hljs-keyword">new</span> mongoose.Schema (&#123;
+  name: <span class="hljs-built_in">String</span>,
+  rating: <span class="hljs-built_in">Number</span>,
+  review: <span class="hljs-built_in">String</span>
+&#125;);</code></pre>
+
+<p>可以对某个数据的格式进行规定:</p>
+<p>规定rating为numer类型, 最小1最大10</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> fruitSchema = <span class="hljs-keyword">new</span> mongoose.Schema (&#123;
+  name: <span class="hljs-built_in">String</span>,
+  rating: &#123;
+    type: <span class="hljs-built_in">Number</span>,
+    min: <span class="hljs-number">1</span>,
+    max: <span class="hljs-number">10</span>
+  &#125;,
+  review: <span class="hljs-built_in">String</span>
+&#125;);</code></pre>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/categories/Developer/">Developer</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/categories/Developer/Web-App/">Web App</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/Self-Learning/">Self Learning</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/Note/">Note</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/Web-App/">Web App</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/Database/">Database</a>
+                    
+                      <a class="hover-with-bg" href="/blog.github.io/tags/MongoDB/">MongoDB</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog.github.io/2020/10/05/REACT/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">REACT</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog.github.io/2020/10/05/JavaScript-code-Example/">
+                        <span class="hidden-mobile">JavaScript code Example</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/blog.github.io/js/debouncer.js" ></script>
+<script  src="/blog.github.io/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/blog.github.io/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/blog.github.io/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "MongoDB&nbsp;",
+      ],
+      cursorChar: "|",
+      typeSpeed: 20,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/blog.github.io/js/local-search.js" ></script>
+  <script>
+    var path = "/blog.github.io/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
