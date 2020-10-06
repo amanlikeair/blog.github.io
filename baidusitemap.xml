@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://amanlikeair.github.io/blog.github.io/2020/10/05/REST%20and%20API/</loc>
+    <lastmod>2020-10-06</lastmod>
+  </url>
+  <url>
     <loc>https://amanlikeair.github.io/blog.github.io/2020/10/05/Publish-app-to-Web/</loc>
     <lastmod>2020-10-05</lastmod>
   </url>
@@ -14,10 +18,6 @@
   </url>
   <url>
     <loc>https://amanlikeair.github.io/blog.github.io/2020/10/05/MongoDB/</loc>
-    <lastmod>2020-10-05</lastmod>
-  </url>
-  <url>
-    <loc>https://amanlikeair.github.io/blog.github.io/2020/10/05/REST%20&%20API/</loc>
     <lastmod>2020-10-05</lastmod>
   </url>
   <url>
